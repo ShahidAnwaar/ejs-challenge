@@ -1,0 +1,16 @@
+<%- include('partials/header'); -%>
+
+<div class="row" style="padding-top: 39px;">
+    <div class="col">
+        <h1> <%= topic %></h1>
+    </div>
+    <div <div class="col text-end">
+    <small> <%= DateCreate %> </small>
+    </div>
+</div>
+<p> <%= content %></p>
+<form action="/delete" method="post">
+    <input type="hidden" name="PostId" value="<%= postId %>" />
+    <button class="btn btn-primary" type="submit"> Delete this Post </button>
+</form>
+<%- include('partials/footer'); -%>
